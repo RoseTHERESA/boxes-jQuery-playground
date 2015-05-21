@@ -75,7 +75,7 @@ $("a").click(fucntion(event) {
 	event.preventDefault();
 	alert("You cannot leave!");
 });
-
+/*
 $(".box").click(function(e) {
 	var el = $(this);
 	if (el.children().length >= 1)
@@ -86,6 +86,19 @@ $(".box").click(function(e) {
 		el.children().width(150)
 	};
 });
+*/
+
+$(".box").click(function(e) {
+  var el = $(this);
+  
+  if (el.children("img").length >= 1) {
+    el.children("img").toggleClass("hiding");
+  } else {
+    el.html('<img src="http://www.mrwallpaper.com/wallpapers/Cute-Puppy-Kitten.jpg"></img>');
+    el.children().width(150)
+  }
+});
+
 
 $('#container').click(function(event){
 	if(event.targe.id === 'container')
